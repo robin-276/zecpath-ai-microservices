@@ -1,0 +1,6 @@
+{
+  "skill_name": "String (e.g., Python, Data Analysis)",
+  "category": "String (e.g., Technical, Soft Skill, Tool)",
+  "proficiency_level": "String (e.g., Beginner, Intermediate, Expert) - Optional",
+  "years_of_experience": "Number (e.g., 2.5) - Optional"
+}

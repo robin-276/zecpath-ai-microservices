@@ -1,0 +1,47 @@
+{
+  "candidate_id": "String (Unique Identifier)",
+  "personal_info": {
+    "full_name": "String",
+    "email": "String",
+    "phone": "String",
+    "location": "String",
+    "linkedin_url": "String"
+  },
+  "professional_summary": "String (Brief overview of the candidate)",
+  "skills": [
+    {
+      "skill_name": "Python",
+      "category": "Programming Language",
+      "proficiency_level": "Expert"
+    },
+    {
+      "skill_name": "Machine Learning",
+      "category": "Core Competency",
+      "proficiency_level": "Intermediate"
+    }
+  ],
+  "experience": [
+    {
+      "company_name": "Sinro Robotics",
+      "designation": "AI & ML Intern",
+      "start_date": "2026-03",
+      "end_date": "2026-04",
+      "is_current": false,
+      "responsibilities": [
+        "Developed machine learning models.",
+        "Assisted in data preprocessing."
+      ],
+      "tools_and_technologies_used": ["Python", "TensorFlow", "Scikit-learn"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "String (e.g., Bachelor of Computer Applications)",
+      "institution": "String (e.g., SKCMS)",
+      "graduation_year": "Number (e.g., 2025)"
+    }
+  ],
+  "certifications": [
+    "String (e.g., Data Science and AI Certification - AVODHA)"
+  ]
+}

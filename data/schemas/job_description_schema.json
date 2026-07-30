@@ -1,0 +1,25 @@
+{
+  "job_id": "String (Unique Identifier)",
+  "job_metadata": {
+    "job_title": "String (e.g., Data Analyst)",
+    "department": "String (e.g., Data Science)",
+    "location": "String (e.g., Kochi, Kerala)",
+    "employment_type": "String (e.g., Full-time, Internship)"
+  },
+  "requirements": {
+    "minimum_years_experience": "Number (e.g., 1)",
+    "mandatory_skills": [
+      "String (e.g., Python)",
+      "String (e.g., SQL)"
+    ],
+    "preferred_skills": [
+      "String (e.g., Django)",
+      "String (e.g., AWS)"
+    ],
+    "required_education": "String (e.g., Bachelor's Degree in Computer Science or related field)"
+  },
+  "responsibilities": [
+    "String (e.g., Analyze large datasets to extract actionable insights.)",
+    "String (e.g., Build predictive models.)"
+  ]
+}
