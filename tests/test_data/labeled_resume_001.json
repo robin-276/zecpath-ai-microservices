@@ -1,0 +1,12 @@
+{
+  "_metadata": {
+    "candidate_id": "cnd-test-001",
+    "status": "ground_truth_label"
+  },
+  "expected_sections": {
+    "summary_or_other": ["ROBIN JOSE\nInnovative Software Developer"],
+    "skills": ["Python, TensorFlow, Django, SQL"],
+    "experience": ["AI & ML Intern - SINRO ROBOTICS\nWorked on machine learning models and data classification."],
+    "education": ["Bachelor of Computer Applications\nSKCMS, Mahatma Gandhi University"]
+  }
+}
