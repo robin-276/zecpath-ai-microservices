@@ -37,8 +37,8 @@ class EducationParser:
         return "Unknown"
 
     def _extract_year(self, text):
-        # Looks for 4-digit years (e.g., 2022, 2025)
-        years = re.findall(r'\b(19|20)\d{2}\b', text)
+        # FIXED: Added ?: for a non-capturing group so it returns the full 4 digits
+        years = re.findall(r'\b(?:19|20)\d{2}\b', text)
         if years:
             return int(years[-1]) # Graduation year is usually the last date listed
         return None
