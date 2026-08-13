@@ -1,0 +1,90 @@
+openapi: 3.0.0
+info:
+  title: Zecpath ATS AI Microservices API
+  version: 1.0.0
+  description: REST API contracts for resume parsing, scoring, and candidate shortlisting.
+
+paths:
+  /api/v1/ats/process-resume:
+    post:
+      summary: Uploads and parses a resume asynchronously.
+      description: Accepts a raw file, initiates the parsing and semantic matching pipeline, and returns a job tracking ID.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                job_id:
+                  type: string
+                  description: The target job description ID for semantic matching.
+      responses:
+        '202':
+          description: Accepted for processing.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AsyncResponse'
+
+  /api/v1/ats/candidates/rank:
+    get:
+      summary: Retrieves a ranked and shortlisted batch of candidates for a specific job.
+      parameters:
+        - in: query
+          name: job_id
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully ranked candidates.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RankedOutput'
+
+components:
+  schemas:
+    AsyncResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "processing"
+        task_id:
+          type: string
+          example: "tsk_987654321"
+        message:
+          type: string
+          example: "Resume submitted to AI extraction queue."
+          
+    RankedOutput:
+      type: object
+      properties:
+        summary:
+          type: object
+          properties:
+            total_evaluated: { type: integer }
+            shortlisted_count: { type: integer }
+        top_candidates:
+          type: array
+          items:
+            type: object
+            properties:
+              candidate_id: { type: string }
+              final_score: { type: number }
+              zone: { type: string }
+
+    ErrorResponse:
+      type: object
+      properties:
+        error_code:
+          type: string
+          example: "ERR_FILE_UNSUPPORTED"
+        message:
+          type: string
+          example: "Only PDF and DOCX files are supported."
