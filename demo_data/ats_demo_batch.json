@@ -1,0 +1,27 @@
+{
+  "demo_scenario": "Hiring a Data Scientist (Fresher/Junior)",
+  "job_requirements": ["Python", "Machine Learning", "NLP", "Pandas", "TensorFlow"],
+  "candidates": [
+    {
+      "candidate_id": "cnd-901",
+      "name": "Candidate A",
+      "resume_snippet": "BCA Graduate. Completed 6-month AVODHA certification. Built a Semiconductor Wafer Defect Classification project using Python, Random Forest (96% accuracy), and Pandas. Contact: testA@email.com.",
+      "raw_score": 88.5,
+      "keyword_density": 0.08
+    },
+    {
+      "candidate_id": "cnd-902",
+      "name": "Candidate B",
+      "resume_snippet": "Software Engineer with 5 years in PHP, HTML, and MySQL. Seeking transition to Data Science. Built a CMS for a college magazine. Contact: +91-9876543210.",
+      "raw_score": 62.0,
+      "keyword_density": 0.04
+    },
+    {
+      "candidate_id": "cnd-903",
+      "name": "Candidate C",
+      "resume_snippet": "Python Machine Learning NLP Pandas TensorFlow Python Machine Learning NLP Pandas TensorFlow Python Data Science AI.",
+      "raw_score": 95.0,
+      "keyword_density": 0.28
+    }
+  ]
+}
